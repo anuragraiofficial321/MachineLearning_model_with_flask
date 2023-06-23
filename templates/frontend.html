@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Input and Result</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"] {
+      width: 200px;
+      padding: 5px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>User Input and Result</h1>
+  
+  <form method="post" action="/result">
+    <label>CGPA:</label><br>
+    <input type="text" name="CGPA" /><br><br>
+  
+    <label>IQ:</label><br>
+    <input type="text" name="IQ" /><br><br>
+  
+    <label>PROFILE SCORE:</label><br>
+    <input type="text" name="PROFILE_SCORE" /><br><br>
+  
+    <button type="submit">Generate Result</button><br>
+  </form>
+  {% if result %}
+      Result: {{ result }}
+  {% endif %}
+</body>
+</html>
